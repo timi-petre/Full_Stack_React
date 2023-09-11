@@ -30,7 +30,7 @@ app.put('/api/articles/:name/upvote', async (req, res) => {
 
 	if (article) {
 		// article.upvotes += 1
-		res.send(`The ${name} article now has ${article.upvotes} upvotes`)
+		res.json(article)
 	} else {
 		res.send("That article does't exists")
 	}
